@@ -12,8 +12,8 @@
   font-weight: 700;
   font-size: 20px;
   border: 0;
-  padding: 18px 35px;
-  height: 70px;
+  padding: 10px 20px;
+  height: 40px;
   border-radius: 5px;
   background: #fd6e0a;
 }
@@ -25,14 +25,14 @@
   color: #fd6e0a;
   font-size: 25px;
   font-weight: 700;
-  padding: 18px 35px;
+  padding: 18px px;
   border-radius: 5px;
   background-color: white;
   border: 3px solid #fd6e0a;
 }
 .header {
   background: #fff8f3;
-  background-image: url("../images/header_bg.png"), url(../images/developer.png);
+  background-image: url("../images/header_bg.png"), url("../images/developer.png");
   background-repeat: no-repeat;
   background-position: bottom right, left;
 }
@@ -197,3 +197,68 @@ input {
 .contact a {
   text-decoration: none;
 }
+/* Responsive style */
+@media screen and (max-width:576px){
+  .header{
+    background-image: none;
+  }
+  nav,
+  .banner,
+  .skills-container, 
+  .resume-content,
+  .about-info-container,
+  .contact{
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 20px;
+  }
+  .banner{
+    margin: 0 20px;
+  }
+  .banner img{
+    width: 100%;
+  }
+  nav{
+    margin: 5px;
+  }
+  nav ul{
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+  nav li{
+    margin-left: 0;
+  }
+  .about,.contact{
+    padding: 20px;
+  }
+  .contact input[type="text"],
+input[type="email"],
+textarea{
+  padding: 0 0 0 5px;
+} 
+}
+@media screen and (min-width:577px) and (max-width:992px){
+  .about, .contact{
+    padding: 20px;
+    
+  }
+  .contact,.banner{
+    flex-direction: column;
+  }
+  .contact input[type="text"],
+input[type="email"],
+textarea{
+  padding: 0 0 0 5px;
+}
+nav ul{
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+}
+
+/* .hide{
+  display: none;
+} */
